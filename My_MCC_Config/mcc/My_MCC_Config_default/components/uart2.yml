@@ -27,5 +27,25 @@ data:
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
-  symbols: {}
+  symbols:
+    UART_MR_PAR:
+      attributes:
+        id: UART_MR_PAR
+      children:
+      - children:
+        - attributes:
+            value: 'NO'
+          type: User
+        type: Values
+      type: Combo
+    UART_MR_FILTER:
+      attributes:
+        id: UART_MR_FILTER
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
   userData: {}

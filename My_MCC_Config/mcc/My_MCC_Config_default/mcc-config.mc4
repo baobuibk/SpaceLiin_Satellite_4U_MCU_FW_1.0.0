@@ -77,7 +77,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\default\peripheral\tc\plib_tc_common.h
   hash: 920c335908d58caf6b00d824870cc7c8b80011a09c27e6ff7b56f6fc237ee5c5
 - file: ..\src\config\default\peripheral\uart\plib_uart2.c
-  hash: 83fdacbca627168c280c4cab6538cb51678e344c294e8cfe9356143a67bba802
+  hash: 39eeacd72cc51392ce8dde4134312042ae70ba82909ebe9c2e624f26d522f6b7
 - file: ..\src\config\default\peripheral\uart\plib_uart2.h
   hash: 6bc37e3223b61f69803f7fa24f2f457211835933dcad0e7f7026b80975167784
 - file: ..\src\config\default\peripheral\uart\plib_uart_common.h

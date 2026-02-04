@@ -69,7 +69,7 @@
             "name": "default",
             "files": [
                 {
-                    "include": "**/*",
+                    "include": "",
                     "exclude": "**/(_build|out|cmake|.vscode)/**/*"
                 },
                 "My_MCC_Config/src/config/default/device_cache.h",
@@ -218,7 +218,10 @@
                 "My_MCC_Config/src/config/default/peripheral/usart/plib_usart2.c",
                 "My_MCC_Config/src/config/default/peripheral/uart/plib_uart_common.h",
                 "My_MCC_Config/src/config/default/peripheral/uart/plib_uart2.h",
-                "My_MCC_Config/src/config/default/peripheral/uart/plib_uart2.c"
+                "My_MCC_Config/src/config/default/peripheral/uart/plib_uart2.c",
+                {
+                    "exclude": "**/Dev/*"
+                }
             ]
         }
     ]

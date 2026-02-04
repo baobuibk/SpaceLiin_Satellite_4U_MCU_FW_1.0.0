@@ -186,7 +186,7 @@ void UART2_Initialize( void )
     UART2_REGS->UART_CR = (UART_CR_TXEN_Msk | UART_CR_RXEN_Msk);
 
     /* Configure UART2 mode */
-    UART2_REGS->UART_MR = ((UART_MR_BRSRCCK_PERIPH_CLK) | (UART_MR_PAR_NO) | (0U << UART_MR_FILTER_Pos));
+    UART2_REGS->UART_MR = ((UART_MR_BRSRCCK_PERIPH_CLK) | (UART_MR_PAR_NO) | (1U << UART_MR_FILTER_Pos));
 
     /* Configure UART2 Baud Rate */
     UART2_REGS->UART_BRGR = UART_BRGR_CD(81);
