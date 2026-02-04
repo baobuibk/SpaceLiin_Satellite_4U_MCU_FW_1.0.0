@@ -1,0 +1,11 @@
+configVersion: 1.0.0
+coreVersion: 5.8.4
+device: ATSAMV71Q21B
+deviceLibrary: {}
+groupModules: []
+modules:
+- cmsis
+- core
+- dfp
+- efc
+generatedFileHashHistoryMap: []

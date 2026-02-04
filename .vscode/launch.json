@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+            "executable": "./bin/executable.elf",
+            "name": "Debug with OpenOCD",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": [],
+            "searchDir": [],
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none"
+        },
+        {
+            "name": "Launch SAMV71_ISS: default",
+            "type": "mplab-core-da",
+            "request": "launch",
+            "project": "SAMV71_ISS",
+            "configuration": "default",
+            "stopOnEntry": true,
+            "preLaunchTask": "SAMV71_ISS: default - Full Build",
+            "program": "d:\\PROJECT\\LIINSPACE\\ISS\\SAMV71_ISS\\out\\SAMV71_ISS\\default.elf"
+        }
+    ]
+}
