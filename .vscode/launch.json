@@ -6,16 +6,21 @@
     "configurations": [
         {
             "cwd": "${workspaceRoot}",
-            "executable": "./bin/executable.elf",
+            "executable": "${workspaceRoot}/out/SAMV71_ISS/default.elf",
             "name": "Debug with OpenOCD",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd",
-            "configFiles": [],
+            "svdFile": "${workspaceRoot}/svd/ATSAMV71Q21B.svd",
+            "configFiles": [
+                "interface/cmsis-dap.cfg",
+                "target/atsamv.cfg"
+            ],
             "searchDir": [],
             "runToEntryPoint": "main",
             "showDevDebugOutput": "none"
         },
+    
         {
             "name": "Launch SAMV71_ISS: default",
             "type": "mplab-core-da",
@@ -24,7 +29,9 @@
             "configuration": "default",
             "stopOnEntry": true,
             "preLaunchTask": "SAMV71_ISS: default - Full Build",
-            "program": "d:\\PROJECT\\LIINSPACE\\ISS\\SAMV71_ISS\\out\\SAMV71_ISS\\default.elf"
+            "program": "d:\\PROJECT\\LIINSPACE\\ISS\\SAMV71_ISS\\out\\SAMV71_ISS\\default.elf",
+            "svdFile": "${workspaceRoot}/svd/ATSAMV71Q21B.svd"
+
         }
     ]
 }

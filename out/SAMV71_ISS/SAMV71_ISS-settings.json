@@ -1,1 +1,1 @@
-{"oscillator.frequency":"16","oscillator.rcfrequency":"32","project":"SAMV71_ISS","configuration":"default"}
+{"oscillator.frequency":"16","oscillator.rcfrequency":"32","communication.speed":"4","debugoptions.debug-startup":"Halt at main","script.has_reset":"false","project":"SAMV71_ISS","configuration":"default"}

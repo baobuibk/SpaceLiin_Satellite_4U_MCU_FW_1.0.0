@@ -26,7 +26,12 @@
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "definitions.h"                // SYS function prototypes
+#include "stdio.h"
+#include "string.h"
 
+// *****************************************************************************
+#include "M0_App/Boot/boot_manager.h"
+// *****************************************************************************
 
 // *****************************************************************************
 // *****************************************************************************
@@ -37,9 +42,14 @@
 int main ( void )
 {
     /* Initialize all modules */
-    SYS_Initialize ( NULL );
 
-    while ( true )
+    SYS_Initialize ( NULL );
+    
+    BootManager_SystemInit();
+
+    BootManager_SystemStart();
+        
+    for(;;)
     {
         /* Maintain state machines of all polled MPLAB Harmony modules. */
         SYS_Tasks ( );

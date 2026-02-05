@@ -7,7 +7,7 @@
             "device": "ATSAMV71Q21B",
             "imagePath": "./out/SAMV71_ISS/default.elf",
             "toolProperties": "default-tool-base",
-            "tool": "Simulator",
+            "tool": "EDBG",
             "packs": [
                 {
                     "name": "SAMV71_DFP",
@@ -60,7 +60,10 @@
             "type": "tool",
             "properties": {
                 "oscillator.frequency": "16",
-                "oscillator.rcfrequency": "32"
+                "oscillator.rcfrequency": "32",
+                "communication.speed": "4",
+                "debugoptions.debug-startup": "Use system settings",
+                "script.has_reset": true
             }
         }
     ],

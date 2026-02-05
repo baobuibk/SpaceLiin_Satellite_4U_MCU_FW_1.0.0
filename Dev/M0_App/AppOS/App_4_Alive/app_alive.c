@@ -27,7 +27,7 @@ void App_AliveTask(void *param)
     char buf[32];
     for(;;)
     {
-        LED_PA23_Toggle();
+//        LED_PA23_Toggle();
         osThreadFeed();
         snprintf(buf, sizeof(buf), "Alive counter: %u", counter++);
 //        xlog("Hello World %d\r\n", counter++);
