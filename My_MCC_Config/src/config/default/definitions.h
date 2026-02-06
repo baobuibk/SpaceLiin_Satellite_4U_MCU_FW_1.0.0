@@ -48,16 +48,19 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "peripheral/afec/plib_afec0.h"
-#include "peripheral/afec/plib_afec1.h"
-#include "peripheral/uart/plib_uart2.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/systick/plib_systick.h"
 #include "peripheral/efc/plib_efc.h"
-#include "peripheral/tc/plib_tc3.h"
 #include "bsp/bsp.h"
+#include "peripheral/tc/plib_tc3.h"
+#include "peripheral/afec/plib_afec0.h"
+#include "peripheral/afec/plib_afec1.h"
+#include "peripheral/uart/plib_uart2.h"
+#include "bsp/bsp.h"
+#include "peripheral/spi/spi_master/plib_spi0_master.h"
+#include "peripheral/spi/spi_master/plib_spi1_master.h"
 #include "peripheral/usart/plib_usart2.h"
 
 // DOM-IGNORE-BEGIN

@@ -52,9 +52,9 @@
 // Section: Configuration Bits
 // ****************************************************************************
 // ****************************************************************************
-// #pragma config TCM_CONFIGURATION = 0
-// #pragma config SECURITY_BIT = CLEAR
-// #pragma config BOOT_MODE = SET
+#pragma config TCM_CONFIGURATION = 0
+#pragma config SECURITY_BIT = CLEAR
+#pragma config BOOT_MODE = SET
 
 
 
@@ -125,24 +125,29 @@ void SYS_Initialize ( void* data )
 
 
 
-    AFEC0_Initialize();
-
-    AFEC1_Initialize();
-
-	UART2_Initialize();
-
 	SYSTICK_TimerInitialize();
 	RSWDT_REGS->RSWDT_MR = RSWDT_MR_WDDIS_Msk;	// Disable RSWDT 
 
 	WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk; 		// Disable WDT 
 
+	BSP_Initialize();
   
 
  
     TC3_CH0_TimerInitialize(); 
      
     
-	BSP_Initialize();
+    AFEC0_Initialize();
+
+    AFEC1_Initialize();
+
+	UART2_Initialize();
+
+    BSP_Initialize();
+	SPI0_Initialize();
+
+	SPI1_Initialize();
+
     USART2_Initialize();
 
 

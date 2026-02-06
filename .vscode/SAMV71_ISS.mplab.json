@@ -224,7 +224,12 @@
                 "My_MCC_Config/src/config/default/peripheral/uart/plib_uart2.c",
                 {
                     "exclude": "**/Dev/*"
-                }
+                },
+                "My_MCC_Config/src/config/default/peripheral/spi/spi_master/plib_spi_master_common.h",
+                "My_MCC_Config/src/config/default/peripheral/spi/spi_master/plib_spi0_master.h",
+                "My_MCC_Config/src/config/default/peripheral/spi/spi_master/plib_spi0_master.c",
+                "My_MCC_Config/src/config/default/peripheral/spi/spi_master/plib_spi1_master.h",
+                "My_MCC_Config/src/config/default/peripheral/spi/spi_master/plib_spi1_master.c"
             ]
         }
     ]

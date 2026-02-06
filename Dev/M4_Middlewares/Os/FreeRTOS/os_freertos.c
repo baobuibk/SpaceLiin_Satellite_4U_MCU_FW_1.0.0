@@ -1,8 +1,11 @@
 #include "os_hal.h"
 
 #include "FreeRTOS.h"
+#include "portmacro.h"
 #include "semphr.h"
 #include "task.h"
+#include <stdint.h>
+#include "define.h"
 
 /* =========================================================
  * Internal definition (opaque to users)
@@ -25,7 +28,10 @@ void os_delay_ms(uint32_t ms)
 {
     vTaskDelay(ms_to_ticks(ms));
 }
-
+void os_sleep_ms(uint32_t ms)
+{
+    vTaskDelay(ms_to_ticks(ms));
+}
 static bool osIsInISR(void)
 {
 #if defined(xPortIsInsideInterrupt)
@@ -75,4 +81,38 @@ void os_lock_release(os_lock_t lock)
 
     struct os_lock* l = (struct os_lock*)lock;
     (void)xSemaphoreGive(l->h);
+}
+uint32_t os_reg_wait_flag(const volatile uint32_t* reg, uint32_t flag, uint32_t timeout_ms)
+{
+    uint32_t tick = 0;
+
+    while (((*reg) & flag) == 0) {
+        os_sleep_ms(1);
+        tick++;
+        if (tick >= timeout_ms) {
+            return ERROR_TIMEOUT;  /* timeout */
+        }
+    }
+    return ERROR_OK;
+}
+
+uint32_t os_reg_wait_flag_blocking(const volatile uint32_t* reg, uint32_t flag, uint32_t timeout_ms)
+{
+    TickType_t start_tick = xTaskGetTickCount();
+    while (((*reg) & flag) == 0) {
+        if (xTaskGetTickCount() - start_tick >= ms_to_ticks(timeout_ms)) {
+            return ERROR_TIMEOUT;  /* timeout */
+        }
+    }
+    return ERROR_OK;
+}
+uint32_t os_reg_wait_clear_flag_blocking(const volatile uint32_t* reg, uint32_t flag, uint32_t timeout_ms)
+{
+    TickType_t start_tick = xTaskGetTickCount();
+    while (((*reg) & flag) != 0) {
+        if (xTaskGetTickCount() - start_tick >= ms_to_ticks(timeout_ms)) {
+            return ERROR_TIMEOUT;  /* timeout */
+        }
+    }
+    return ERROR_OK;
 }

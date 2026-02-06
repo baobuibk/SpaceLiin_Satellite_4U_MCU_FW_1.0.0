@@ -283,7 +283,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '537107456'
+            value: '539204608'
           type: Dynamic
         type: Values
       type: Hex
@@ -382,7 +382,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '266496'
+            value: '267520'
           type: Dynamic
         type: Values
       type: Hex
@@ -724,6 +724,182 @@ data:
         - attributes:
             id: uart2
             value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SPI0_CLOCK_ENABLE:
+      attributes:
+        id: SPI0_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: spi0
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SPI0_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: SPI0_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_21_0_ENABLE:
+      attributes:
+        id: NVIC_21_0_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_21_0_HANDLER:
+      attributes:
+        id: NVIC_21_0_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: SPI0_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    NVIC_21_0_HANDLER_LOCK:
+      attributes:
+        id: NVIC_21_0_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SPI1_CLOCK_ENABLE:
+      attributes:
+        id: SPI1_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: spi1
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SPI1_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: SPI1_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_42_0_ENABLE:
+      attributes:
+        id: NVIC_42_0_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_42_0_HANDLER:
+      attributes:
+        id: NVIC_42_0_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: SPI1_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    NVIC_42_0_HANDLER_LOCK:
+      attributes:
+        id: NVIC_42_0_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SPI0_INTERRUPT_ENABLE:
+      attributes:
+        id: SPI0_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: spi0
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SPI0_INTERRUPT_HANDLER:
+      attributes:
+        id: SPI0_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: spi0
+            value: SPI0_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    SPI0_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: SPI0_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: spi0
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SPI1_INTERRUPT_ENABLE:
+      attributes:
+        id: SPI1_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: spi1
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SPI1_INTERRUPT_HANDLER:
+      attributes:
+        id: SPI1_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: spi1
+            value: SPI1_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    SPI1_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: SPI1_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: spi1
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean

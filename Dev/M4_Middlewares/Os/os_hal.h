@@ -17,6 +17,10 @@ bool os_lock_init(os_lock_t* out);
 bool os_lock_acquire(os_lock_t lock, uint32_t timeout);
 void os_lock_release(os_lock_t lock);
 void os_delay_ms(uint32_t ms);
+void os_sleep_ms(uint32_t ms);
+uint32_t os_reg_wait_flag(const volatile uint32_t* reg, uint32_t flag, uint32_t timeout_ms);
+uint32_t os_reg_wait_flag_blocking(const volatile uint32_t* reg, uint32_t flag,uint32_t timeout_ms);
+uint32_t os_reg_wait_clear_flag_blocking(const volatile uint32_t* reg, uint32_t flag, uint32_t timeout_ms);
 
 #ifdef __cplusplus
 }

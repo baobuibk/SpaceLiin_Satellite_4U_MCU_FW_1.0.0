@@ -12,6 +12,9 @@ modules:
 - core
 - dfp
 - efc
+- mainBoard_SAMV71_XPLAINED_ULTRA
+- spi0
+- spi1
 - tc3
 - uart2
 - usart2
@@ -23,7 +26,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\default\bsp\bsp.h
   hash: a329e44156acb118e9266f48dd816c92ebc4c5996a8e0e3115afe729a3984741
 - file: ..\src\config\default\definitions.h
-  hash: ce2f0b9a628216eaebf1a6dbfd5fef4e815fdb543d7b63143e8bcbab99bf0a22
+  hash: eab3bfbcdc274963b2af800030999fcec44e12df0f5937e06d0ed787c0c14c46
 - file: ..\src\config\default\device.h
   hash: 2aecc75fe5031c595e00fd7fbe03793d1b9d34f12c8ae0b1fb8a8ade158a2071
 - file: ..\src\config\default\device_cache.h
@@ -33,7 +36,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\default\exceptions.c
   hash: d1fcd7158950bb6ce6461d093cfa2ab341af3e6ea0337a936aa3ee9da98c6e55
 - file: ..\src\config\default\initialization.c
-  hash: f2d15864263da4e34a957baef2a870d95bdd5d3fd315f2dac3c884bc4edd2e1a
+  hash: 8a8230f1cb7277fdf9e6062504ca1406f890f44d644c4d87e8a6d4610ddcee04
 - file: ..\src\config\default\interrupts.c
   hash: 99af335b126d94063312e6a8836bd653e638ee8a65d408fe93fc4c6d7dcb8df4
 - file: ..\src\config\default\interrupts.h
@@ -51,7 +54,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\default\peripheral\afec\plib_afec_common.h
   hash: 5998954d07f45b325d77f4b8042b784f876b4e1864ece30843fdd67f5f40a6d4
 - file: ..\src\config\default\peripheral\clk\plib_clk.c
-  hash: 0d71ee6b3009b28a08ad3a847dc240a9114a0c185c76c23aa23d49acad46e867
+  hash: 78249dd1c311c02c844b38724c23f5080318a42dcf6553139ad0b5dd1c278436
 - file: ..\src\config\default\peripheral\clk\plib_clk.h
   hash: 4f80a7fdb2529a654f89f11159078b9ebad3e5dddbd7fe60c58df49c05c8e55d
 - file: ..\src\config\default\peripheral\efc\plib_efc.c
@@ -66,6 +69,16 @@ generatedFileHashHistoryMap:
   hash: c48a451d5394c09e75587cdd1a633c4faea5f25dad10dcb709360356ca7a6453
 - file: ..\src\config\default\peripheral\pio\plib_pio.h
   hash: 87253708db08c9aa03fa1555403cb80629a091b4a1fdf94e3f7428d7bbecc00c
+- file: ..\src\config\default\peripheral\spi\spi_master\plib_spi0_master.c
+  hash: 7eaeb8027ce2ab4b6ccc7e1d088708dd356de76c8fd20c70c811a85ba5f3ffe4
+- file: ..\src\config\default\peripheral\spi\spi_master\plib_spi0_master.h
+  hash: baea54ccc662ad375d397641a8c8397e3b53d9dde17017eb6526ddac8984ac79
+- file: ..\src\config\default\peripheral\spi\spi_master\plib_spi1_master.c
+  hash: 1688a1de6105f5ebb2a9710918a3d59a322b25f21a7af2dbf13b1401ea35b00e
+- file: ..\src\config\default\peripheral\spi\spi_master\plib_spi1_master.h
+  hash: 6aac37d34a93b77e80a682f6ae679b436d74836ef7b5a612f270d97365b9ada2
+- file: ..\src\config\default\peripheral\spi\spi_master\plib_spi_master_common.h
+  hash: e9a33a15a5f1458ccee12f902c1c4473038018a855a40614746be6e6e0e81b09
 - file: ..\src\config\default\peripheral\systick\plib_systick.c
   hash: adc780f2fa55234e79ea6b98d1ab1cfa607d44da61351b51e9722c948a6c349a
 - file: ..\src\config\default\peripheral\systick\plib_systick.h

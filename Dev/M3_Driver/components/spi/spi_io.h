@@ -89,7 +89,7 @@ typedef struct
 
 /* Configuration */
 uint32_t spi_io_init(spi_io_t *me);
-uint32_t spi_io_set_mode(spi_io_t *me, spi_mode_t mode);
+uint32_t spi_io_set_mode(spi_io_t *me, uint8_t spi_mode);
 
 /* Synchronous (blocking) */
 uint32_t spi_io_read_sync(spi_io_t *me, uint8_t *pui8RxBuff, uint32_t ui32Length);
