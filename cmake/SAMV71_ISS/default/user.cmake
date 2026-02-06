@@ -19,7 +19,7 @@ target_sources(SAMV71_ISS_default_default_XC32_compile PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M2_BSP/UART/uart_dma.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M2_BSP/UART/uart_irq.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M3_Driver/components/dio/samv71/samv71_do.c"
-    "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M3_Driver/components/i2c/dummy/dummy_i2c_io.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M3_Driver/components/i2c/samv71/samv71_i2c_io.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M3_Driver/components/i2c/i2c_io.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M3_Driver/components/spi/samv71/samv71_spi_io.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M3_Driver/components/spi/spi_io.c"

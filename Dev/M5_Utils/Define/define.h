@@ -23,6 +23,8 @@ typedef enum
     ERROR_TIMEOUT ,  /* Operation timed out */
     ERROR_INVALID_PARAM,
     ERROR_NOT_READY,
+    ERROR_I2C_NACK,
+    ERROR_I2C_BUS,
     ERROR_I2C_TIMEOUT,
     ERROR_SPI
 } Std_ReturnType;
