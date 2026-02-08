@@ -1,6 +1,6 @@
 "Pin Number","Pin ID","Custom Name","Function","Direction","Latch","Open Drain","PIO Interrupt","Pull Up","Pull Down","Glitch/Debounce Filter",Drive Strength
-1,PD0,,Available,In,,,,,,,
-2,PD31,,Available,In,,,,,,,
+1,PD0,GPIO_PD0,GPIO,Out,Low,No,Disabled,No,No,Disabled,Low
+2,PD31,LED_TEST,GPIO,In,n/a,No,Disabled,No,No,Disabled,Low
 4,PE0,,Available,In,,,,,,,
 6,PE1,,Available,In,,,,,,,
 7,PE2,,Available,In,,,,,,,

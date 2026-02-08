@@ -44,9 +44,9 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\default\libc_syscalls.c
   hash: c9afc1b1257829415a1a6746ce3744f0a768b339d59fff2ab3ca1fab58b2a916
 - file: ..\src\config\default\peripheral\afec\plib_afec0.c
-  hash: f9c7290340fe7df5eee3a0cc7d9c8b6c2656a0b6ad8c7a67ebc26208e523299d
+  hash: 492f685df718cbf46d156b0ed4c1d1acb40b83e63edbcddbdb8717788ba64175
 - file: ..\src\config\default\peripheral\afec\plib_afec0.h
-  hash: 8ae8e176667b7304ddac6cd54549df0d080893ff1b7df27ab266c70b161ac20c
+  hash: e5a1c3e6f4b6fde4bfcfa18edcc6a1d2578a518892edb0495f726d7153d2cf30
 - file: ..\src\config\default\peripheral\afec\plib_afec1.c
   hash: 3801f57242fd99c996f0328dc7781f1153a572c480f1abea0350ce7592ad5ad3
 - file: ..\src\config\default\peripheral\afec\plib_afec1.h
@@ -66,9 +66,9 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\default\peripheral\nvic\plib_nvic.h
   hash: 9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208
 - file: ..\src\config\default\peripheral\pio\plib_pio.c
-  hash: c48a451d5394c09e75587cdd1a633c4faea5f25dad10dcb709360356ca7a6453
+  hash: 8fb41689214617097b5cc8781878937aae585d16a6e031e03fda2087cb3b47de
 - file: ..\src\config\default\peripheral\pio\plib_pio.h
-  hash: 87253708db08c9aa03fa1555403cb80629a091b4a1fdf94e3f7428d7bbecc00c
+  hash: 299506b419278b5ee7512447141d9145cba1760da327ca0bc32daf2c2adec4ab
 - file: ..\src\config\default\peripheral\spi\spi_master\plib_spi0_master.c
   hash: 7eaeb8027ce2ab4b6ccc7e1d088708dd356de76c8fd20c70c811a85ba5f3ffe4
 - file: ..\src\config\default\peripheral\spi\spi_master\plib_spi0_master.h
@@ -102,7 +102,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\default\peripheral\usart\plib_usart_common.h
   hash: b58eca63b7625d1bb13cb6399c2991a9fb24e7a5a32e104fb2efb19952bd1957
 - file: ..\src\config\default\pin_configurations.csv
-  hash: 1a4940618fb3250c24de2263c8a28f7eae27ad1a06aa99b69cb0b80b940a3bf6
+  hash: f1b451f53eae643978578ad7039ac5f7c98817bbb1e4e5bc832d6e1bec058934
 - file: ..\src\config\default\startup_xc32.c
   hash: 96f78828471adddbe742293fda18ba0ca127dfa6dbc6c3bdf29552de13b14994
 - file: ..\src\config\default\stdio\xc32_monitor.c

@@ -14,24 +14,24 @@ static int adg1414_chain_write(adg1414_dev_t *dev)
         tx[i] = dev->switch_state[dev->num_of_sw - 1 - i];
     }
 
-    do_reset(&dev->cs);
+    do_reset(dev->cs);
     uint32_t st = spi_io_transfer_sync(dev->spi, tx, rx, dev->num_of_sw);
-    do_set(&dev->cs);
+    do_set(dev->cs);
 
     return (st == ERROR_OK) ? (int)ERROR_OK : (int)st;
 }
 
-int adg1414_chain_init(adg1414_dev_t *dev, spi_io_t *spi, const do_t *cs, uint8_t num)
+int adg1414_chain_init(adg1414_dev_t *dev, spi_io_t *spi, do_t *cs, uint8_t num)
 {
     if (!dev || !spi || !cs) return (int)ERROR_INVALID_PARAM;
     if (num == 0 || num > ADG1414_CHAIN_NUM_CHIPS_MAX) return (int)ERROR_INVALID_PARAM;
 
     dev->spi = spi;
-    dev->cs  = *cs;
+    dev->cs  = cs;
     dev->num_of_sw = num;
 
     memset(dev->switch_state, 0x00, sizeof(dev->switch_state));
-    do_set(&dev->cs);
+    do_set(dev->cs);
 
     return adg1414_chain_write(dev);
 }

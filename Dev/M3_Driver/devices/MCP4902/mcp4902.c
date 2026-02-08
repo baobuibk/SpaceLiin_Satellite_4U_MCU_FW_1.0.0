@@ -4,9 +4,9 @@
 
 static inline void mcp4902_latch_pulse(mcp4902_dev_t *dev) {
     /* xung latch ngắn: LOW -> HIGH */
-    do_reset(&dev->latch);
+    do_reset(dev->latch);
     /* tuỳ platform, có thể cần delay vài chu kỳ */
-    do_set(&dev->latch);
+    do_set(dev->latch);
 }
 
 /* Gửi 1 frame 16-bit (MSB trước) tới một kênh */
@@ -16,9 +16,9 @@ static int mcp4902_write_frame(mcp4902_dev_t *dev, uint16_t frame)
     uint8_t rx[2];
 
     /* CS active -> shift 16 bit -> CS inactive -> pulse latch */
-    do_reset(&dev->cs);
+    do_reset(dev->cs);
     uint32_t st = spi_io_transfer_sync(dev->spi, tx, rx, 2);
-    do_set(&dev->cs);
+    do_set(dev->cs);
 
     mcp4902_latch_pulse(dev);
 
@@ -58,17 +58,17 @@ uint16_t mcp4902_code_2_vol(uint8_t code)
     return (uint16_t)(num / 255u);
 }
 
-int mcp4902_dev_init(mcp4902_dev_t *dev, spi_io_t *spi, const do_t *cs, const do_t *latch)
+int mcp4902_dev_init(mcp4902_dev_t *dev, spi_io_t *spi, do_t *cs, do_t *latch)
 {
     if (!dev || !spi || !cs || !latch) return (int)ERROR_INVALID_PARAM;
 
     dev->spi   = spi;
-    dev->cs    = *cs;
-    dev->latch = *latch;
+    dev->cs    = cs;
+    dev->latch = latch;
 
     /* CS/LATCH idle high như code gốc */
-    do_set(&dev->cs);
-    do_set(&dev->latch);
+    do_set(dev->cs);
+    do_set(dev->latch);
 
     dev->dac_channel[MCP4902_CHA] = 0u;
     dev->dac_channel[MCP4902_CHB] = 0u;

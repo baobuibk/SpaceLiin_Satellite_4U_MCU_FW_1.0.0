@@ -22,8 +22,8 @@
 /* Thiết bị */
 typedef struct {
     spi_io_t   *spi;                         /* bus SPI trừu tượng */
-    do_t        cs;                          /* CS (digital output) */
-    do_t        latch;                       /* LATCH (digital output) */
+    do_t        *cs;                          /* CS (digital output) */
+    do_t        *latch;                       /* LATCH (digital output) */
     uint8_t     dac_channel[MCP4902_NUM_CHANNEL]; /* cache giá trị DAC 8-bit cho A/B */
 } mcp4902_dev_t;
 
@@ -33,8 +33,8 @@ uint16_t mcp4902_code_2_vol(uint8_t code);   /* 8-bit DAC -> mV */
 
 int mcp4902_dev_init(mcp4902_dev_t *dev,
                         spi_io_t *spi,
-                        const do_t *cs,
-                        const do_t *latch);
+                        do_t *cs,
+                        do_t *latch);
 
 int mcp4902_shutdown(mcp4902_dev_t *dev, uint8_t channel);
 int mcp4902_set_dac(mcp4902_dev_t *dev, uint8_t channel, uint8_t code);

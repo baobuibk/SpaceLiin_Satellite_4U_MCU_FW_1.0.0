@@ -15,7 +15,9 @@ target_sources(SAMV71_ISS_default_default_XC32_compile PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M1_SysApp/FastIPC/fast_ipc.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M1_SysApp/dmesg/dmesg.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M1_SysApp/xlog/xlog.c"
-    "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M2_BSP/BSP_Board/bsp_board.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M2_BSP/BSP_Board/bsp_core.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M2_BSP/BSP_laser/bsp_laser.c"
+
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M2_BSP/UART/uart_dma.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M2_BSP/UART/uart_irq.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M3_Driver/components/dio/samv71/samv71_do.c"
@@ -242,6 +244,8 @@ if(TARGET SAMV71_ISS_default_default_XC32_compile)
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M2_BSP/BSP_Board/"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M2_BSP/BSP_Led/"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M2_BSP/UART/"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M2_BSP/BSP_laser/"
+
 
     # ===== Drivers =====
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../Dev/M3_Driver/"
