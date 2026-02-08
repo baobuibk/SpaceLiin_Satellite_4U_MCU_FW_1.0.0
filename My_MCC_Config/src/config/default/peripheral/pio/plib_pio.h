@@ -62,6 +62,24 @@
 // *****************************************************************************
 
 
+/*** Macros for GPIO_PD0 pin ***/
+#define GPIO_PD0_Set()               (PIOD_REGS->PIO_SODR = ((uint32_t)1U<<0U))
+#define GPIO_PD0_Clear()             (PIOD_REGS->PIO_CODR = ((uint32_t)1U<<0U))
+#define GPIO_PD0_Toggle()            (PIOD_REGS->PIO_ODSR ^= ((uint32_t)1U<<0U))
+#define GPIO_PD0_OutputEnable()      (PIOD_REGS->PIO_OER = ((uint32_t)1U<<0U))
+#define GPIO_PD0_InputEnable()       (PIOD_REGS->PIO_ODR = ((uint32_t)1U<<0U))
+#define GPIO_PD0_Get()               ((PIOD_REGS->PIO_PDSR >> 0U) & 0x1U)
+#define GPIO_PD0_PIN                  PIO_PIN_PD0
+
+/*** Macros for LED_TEST pin ***/
+#define LED_TEST_Set()               (PIOD_REGS->PIO_SODR = ((uint32_t)1U<<31U))
+#define LED_TEST_Clear()             (PIOD_REGS->PIO_CODR = ((uint32_t)1U<<31U))
+#define LED_TEST_Toggle()            (PIOD_REGS->PIO_ODSR ^= ((uint32_t)1U<<31U))
+#define LED_TEST_OutputEnable()      (PIOD_REGS->PIO_OER = ((uint32_t)1U<<31U))
+#define LED_TEST_InputEnable()       (PIOD_REGS->PIO_ODR = ((uint32_t)1U<<31U))
+#define LED_TEST_Get()               ((PIOD_REGS->PIO_PDSR >> 31U) & 0x1U)
+#define LED_TEST_PIN                  PIO_PIN_PD31
+
 
 // *****************************************************************************
 /* PIO Port

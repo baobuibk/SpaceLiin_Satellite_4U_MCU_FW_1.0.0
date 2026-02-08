@@ -3,5 +3,6 @@
     "mplab.clangd.arguments": [
         "--compile-commands-dir=${workspaceFolder}\\_build\\SAMV71_ISS\\default"
     ],
-    "mplab.clangd.path": "c:\\Program Files\\Microchip\\xc32\\v5.00\\bin\\xc32-clangd.exe"
+    "mplab.clangd.path": "c:\\Program Files\\Microchip\\xc32\\v5.00\\bin\\xc32-clangd.exe",
+    "cmake.sourceDirectory": "D:/PROJECT/LIINSPACE/ISS/SAMV71_ISS/cmake/SAMV71_ISS/default"
 }

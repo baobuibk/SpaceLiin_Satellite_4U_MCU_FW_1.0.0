@@ -16,7 +16,7 @@
 
 typedef struct {
     spi_io_t   *spi;                                   /* bus SPI (do bạn quản lý) */
-    do_t        cs;                                    /* chân CS (Digital Output) */
+    do_t        *cs;                                    /* chân CS (Digital Output) */
     uint8_t     num_of_sw;                             /* số “chip/byte” trong chuỗi */
     uint8_t     switch_state[ADG1414_CHAIN_NUM_CHIPS_MAX]; /* cache trạng thái từng byte */
 } adg1414_dev_t;
@@ -27,7 +27,7 @@ typedef struct {
  *  - num  : số byte cần đẩy trong chuỗi (6 cho INTERNAL, 1 cho EXTERNAL, ... )
  * Ghi chú: Driver KHÔNG cấu hình mode SPI, chỉ sử dụng API spi_io_* để truyền.
  */
-int adg1414_chain_init(adg1414_dev_t *dev, spi_io_t *spi, const do_t *cs, uint8_t num);
+int adg1414_chain_init(adg1414_dev_t *dev, spi_io_t *spi,  do_t *cs, uint8_t num);
 
 /* Bật một “kênh” theo mapping logic cũ:
  * - Với INTERNAL: chỉ cho phép một kênh hoạt động; channel_num = 1..36 (0 = off all)
